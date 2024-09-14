@@ -1,0 +1,23 @@
+{
+	"manifest_version": 1,
+	"id": "Jopline-Plugin-Chat-GPT-Search",
+	"app_min_version": "2.0",
+	"version": "1.0.0",
+	"name": "Chat GPT Search",
+	"description": "Search selected text on GPT-4o model.",
+	"author": "Bhashkar Gupta",
+	"homepage_url": "https://github.com/BhashkarGupta/Jopline-Plugin-Chat-GPT-Search",
+	"repository_url": "https://github.com/BhashkarGupta/Jopline-Plugin-Chat-GPT-Search",
+	"keywords": [
+		"gpt",
+		"search",
+		"context menu"
+	],
+	"joplin_min_version": "2.0",
+	"categories": [
+		"search"
+	],
+	"enable_api": true,
+	"_publish_hash": "sha256:0d9265d879075fa4fcb8d5adfd87d8c5b5089064fa2b2baf0a75d13662f8cb6c",
+	"_publish_commit": ""
+}
