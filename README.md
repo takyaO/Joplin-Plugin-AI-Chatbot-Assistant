@@ -1,4 +1,4 @@
-# Joplin GPT Search Plugin
+# Joplin GPT Search Plugin - [Get it on Joplin Plugin store](https://joplinapp.org/plugins/plugin/Jopline-Plugin-Chat-GPT-Search/)
 
 ## Description
 
