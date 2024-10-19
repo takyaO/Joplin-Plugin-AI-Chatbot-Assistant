@@ -1,5 +1,5 @@
 # Joplin GPT Search Plugin - [Get it on Joplin Plugin store](https://joplinapp.org/plugins/plugin/Jopline-Plugin-Chat-GPT-Search/)
-Blog Post: [Go to Website]([https://github.com/laurent22/joplin/blob/dev/readme/api/get_started/plugins.md](https://www.techfixerlab.com/2024/10/joplin-gpt-search-plugin-boost-your.html])
+Blog Post: [Go to Website](https://www.techfixerlab.com/2024/10/joplin-gpt-search-plugin-boost-your.html)
 ## Description
 
 The Joplin GPT Search Plugin enhances your note-taking experience by integrating customizable GPT-powered search commands. This plugin allows users to configure up to five distinct search commands, each with adjustable visibility, label, and keyword settings.
