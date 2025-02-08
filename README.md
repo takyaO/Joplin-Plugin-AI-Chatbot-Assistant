@@ -26,5 +26,3 @@ Right-click on a selected text shows the context menu with Command Names as spec
 
 
 **This plugin is enhancement of [Joplin GPT Search Plugin](https://joplinapp.org/plugins/plugin/Jopline-Plugin-Chat-GPT-Search/) by Bhashkar Kumar Gupta.**
-
-Reference for Starting development: [Getting started with plugin development](https://github.com/laurent22/joplin/blob/dev/readme/api/get_started/plugins.md)
