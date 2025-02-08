@@ -25,4 +25,4 @@ Integrating [Joplin](https://joplinapp.org/) with a self-hosted AI platform like
 Right-click on a selected text shows the context menu with Command Names as specified in the Plugin Setting Section. Chatbot's response to the query or prompt is displayed in an external browser. 
 
 
-## This plugin is enhancement of [Joplin GPT Search Plugin](https://joplinapp.org/plugins/plugin/Jopline-Plugin-Chat-GPT-Search/) by Bhashkar Kumar Gupta.**
+**This plugin is enhancement of [Joplin GPT Search Plugin](https://joplinapp.org/plugins/plugin/Jopline-Plugin-Chat-GPT-Search/) by Bhashkar Kumar Gupta.**
