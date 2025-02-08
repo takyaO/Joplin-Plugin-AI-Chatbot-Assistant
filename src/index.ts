@@ -20,14 +20,14 @@ joplin.plugins.register({
                 type: SettingItemType.String,
                 section: 'Chat_GPT_Search',
                 public: true,
-                label: 'Base URL',
+                label: 'Base URL (e.g., https://chatgpt.com)',
             },
             'GPTSearchModel': {
                 value: 'deepseek-r1:8b',
                 type: SettingItemType.String,
                 section: 'Chat_GPT_Search',
                 public: true,
-                label: 'Model',
+                label: 'Model (e.g., gpt-4o)',
             },
             'GPTSearchParams': {
                 value: 'temporary-chat=true',
