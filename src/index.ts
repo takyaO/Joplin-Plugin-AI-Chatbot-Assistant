@@ -69,14 +69,14 @@ joplin.plugins.register({
                 label: '2',
             },
             'GPTSearchLabelWhatIs': {
-                value: 'What is',
+                value: 'Proofread',
                 type: SettingItemType.String,
                 section: 'Chat_GPT_Search',
                 public: true,
                 label: 'Command 2 Name',
             },
             'GPTSearchKeywordWhatIs': {
-                value: 'What is: ',
+                value: 'Proofread what follows for grammar and clarity: ',
                 type: SettingItemType.String,
                 section: 'Chat_GPT_Search',
                 public: true,
@@ -115,14 +115,14 @@ joplin.plugins.register({
                 label: '4',
             },
             'GPTSearchLabelDefine': {
-                value: 'Define',
+                value: 'Translation',
                 type: SettingItemType.String,
                 section: 'Chat_GPT_Search',
                 public: true,
                 label: 'Command 4 Name',
             },
             'GPTSearchKeywordDefine': {
-                value: 'Define: ',
+                value: 'Translate the following text to Japanese: ',
                 type: SettingItemType.String,
                 section: 'Chat_GPT_Search',
                 public: true,
@@ -151,7 +151,30 @@ joplin.plugins.register({
                 public: true,
                 label: 'Command 5 Keyword',
             },
-        });
+
+            // Settings for Command 6
+            'GPTSearchCommand6': {
+                value: 1,
+                type: SettingItemType.Bool,
+                section: 'Chat_GPT_Search',
+                public: true,
+                label: '6',
+            },
+            'GPTSearchLabelRephrase': {
+                value: 'Rephrase',
+                type: SettingItemType.String,
+                section: 'Chat_GPT_Search',
+                public: true,
+                label: 'Command 6 Name',
+            },
+            'GPTSearchKeywordRephrase': {
+                value: 'Rephrase the following while keeping the core message intact: ',
+                type: SettingItemType.String,
+                section: 'Chat_GPT_Search',
+                public: true,
+                label: 'Command 6 Keyword',
+            },
+       });
 
         // Function to perform search based on keyword and selected text
         async function performSearch(keyword: string) {
@@ -180,6 +203,7 @@ joplin.plugins.register({
             { name: 'gptSummary', commandSetting: 'GPTSearchCommand3', labelSetting: 'GPTSearchLabelSummary', keywordSetting: 'GPTSearchKeywordSummary' },
             { name: 'gptDefine', commandSetting: 'GPTSearchCommand4', labelSetting: 'GPTSearchLabelDefine', keywordSetting: 'GPTSearchKeywordDefine' },
             { name: 'gptRelated', commandSetting: 'GPTSearchCommand5', labelSetting: 'GPTSearchLabelRelated', keywordSetting: 'GPTSearchKeywordRelated' },
+            { name: 'gptRephrase', commandSetting: 'GPTSearchCommand6', labelSetting: 'GPTSearchLabelRephrase', keywordSetting: 'GPTSearchKeywordRephrase' },
         ];
         for (const command of commands) {
             // Register command
