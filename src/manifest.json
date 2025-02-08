@@ -7,8 +7,8 @@
      "description": "Integrating Joplin with a self-hosted AI platform like Open WebUI",
      "author": "Takuya Okabe",
     "homepage_url": "https://github.com/takyaO/Jopline-Plugin-Chat-GPT-SearchPlugin-Chat-GPT-Search",
-    "repository_url": "https://github.com/BhashkarGupta/Jopline-Plugin-Chat-GPT-Search",
-    "keywords": ["gpt", "search", "context menu"],
+    "repository_url": "https://github.com/takyaO/Jopline-Plugin-Chat-GPT-SearchPlugin-Chat-GPT-Search",
+    "keywords": ["Open WebUI", "search", "context menu"],
     "joplin_min_version": "2.0",
     "categories": ["search"],
     "enable_api": true
