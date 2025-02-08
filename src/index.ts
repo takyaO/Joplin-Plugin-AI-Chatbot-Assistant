@@ -11,10 +11,32 @@ joplin.plugins.register({
 
         // Define settings for the plugin
         await joplin.settings.registerSection('Chat_GPT_Search', {
-            label: 'GPT Search Settings',
+            label: 'AI Chatbot Assistant',
         });
-
         await joplin.settings.registerSettings({
+            // General settings
+            'GPTSearchURL': {
+                value: 'http://localhost:3000/',
+                type: SettingItemType.String,
+                section: 'Chat_GPT_Search',
+                public: true,
+                label: 'Base URL',
+            },
+            'GPTSearchModel': {
+                value: 'deepseek-r1:8b',
+                type: SettingItemType.String,
+                section: 'Chat_GPT_Search',
+                public: true,
+                label: 'Model',
+            },
+            'GPTSearchParams': {
+                value: 'temporary-chat=true',
+                type: SettingItemType.String,
+                section: 'Chat_GPT_Search',
+                public: true,
+                label: 'Additional Parameters (e.g., temporary-chat=true&web-search=true)',
+            },
+
             // Settings for Command 1
             'GPTSearchCommand1': {
                 value: 1,
@@ -31,7 +53,7 @@ joplin.plugins.register({
                 label: 'Command 1 Name',
             },
             'GPTSearchKeywordExplain': {
-                value: 'explain',
+                value: 'Explain: ',
                 type: SettingItemType.String,
                 section: 'Chat_GPT_Search',
                 public: true,
@@ -54,7 +76,7 @@ joplin.plugins.register({
                 label: 'Command 2 Name',
             },
             'GPTSearchKeywordWhatIs': {
-                value: 'what is',
+                value: 'What is: ',
                 type: SettingItemType.String,
                 section: 'Chat_GPT_Search',
                 public: true,
@@ -77,7 +99,7 @@ joplin.plugins.register({
                 label: 'Command 3 Name',
             },
             'GPTSearchKeywordSummary': {
-                value: 'summarize',
+                value: 'Summarize: ',
                 type: SettingItemType.String,
                 section: 'Chat_GPT_Search',
                 public: true,
@@ -100,7 +122,7 @@ joplin.plugins.register({
                 label: 'Command 4 Name',
             },
             'GPTSearchKeywordDefine': {
-                value: 'define',
+                value: 'Define: ',
                 type: SettingItemType.String,
                 section: 'Chat_GPT_Search',
                 public: true,
@@ -123,7 +145,7 @@ joplin.plugins.register({
                 label: 'Command 5 Name',
             },
             'GPTSearchKeywordRelated': {
-                value: 'related',
+                value: 'Find info related to: ',
                 type: SettingItemType.String,
                 section: 'Chat_GPT_Search',
                 public: true,
@@ -136,7 +158,14 @@ joplin.plugins.register({
             const selectedText = await joplin.commands.execute('selectedText');
             if (selectedText) {
                 const query = encodeURIComponent(`${keyword} ${selectedText}`);
-                const url = `https://chatgpt.com/?model=gpt-4o&q=${query}`;
+                let url = `${await joplin.settings.value('GPTSearchURL')}?model=${await joplin.settings.value('GPTSearchModel')}&q=${query}`;
+
+                // Add additional parameters if provided
+                const params = await joplin.settings.value('GPTSearchParams');
+                if (params) {
+                    url += `&${params}`;
+                }
+
                 console.info(`Opening URL: ${url}`);
                 await joplin.commands.execute('openItem', url);
             } else {
@@ -152,7 +181,6 @@ joplin.plugins.register({
             { name: 'gptDefine', commandSetting: 'GPTSearchCommand4', labelSetting: 'GPTSearchLabelDefine', keywordSetting: 'GPTSearchKeywordDefine' },
             { name: 'gptRelated', commandSetting: 'GPTSearchCommand5', labelSetting: 'GPTSearchLabelRelated', keywordSetting: 'GPTSearchKeywordRelated' },
         ];
-
         for (const command of commands) {
             // Register command
             await joplin.commands.register({
@@ -163,7 +191,6 @@ joplin.plugins.register({
                     await performSearch(keyword);
                 },
             });
-
             // Check if the command should be shown based on settings
             const showCommand = await joplin.settings.value(command.commandSetting);
             if (showCommand) {
