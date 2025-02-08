@@ -17,8 +17,8 @@ Integrating [Joplin](https://joplinapp.org/) with a self-hosted AI platform like
 * `Base URL`: Enter your Open WebUI instance URL, or like https://chatgpt.com
 * `Model`: Specify a model for the chat session, like gpt-4o
 * `Additional Parameters`: In Open WebUI, chat sessions can be customized through various [URL parameters](https://docs.openwebui.com/features/chat-features/url-params/). 
-- `temporary-chat`: Mark the chat as a temporary session if set `true`. 
-- `web-search`: Enable web search functionality if set `true`. 
+  - `temporary-chat`: Mark the chat as a temporary session if set `true`. 
+  - `web-search`: Enable web search functionality if set `true`. 
 
 ## How it works
 
