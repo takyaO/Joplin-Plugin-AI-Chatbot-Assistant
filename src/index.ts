@@ -76,7 +76,7 @@ joplin.plugins.register({
                 label: 'Command 2 Name',
             },
             'GPTSearchKeywordWhatIs': {
-                value: 'Proofread what follows for grammar and clarity: ',
+                value: 'Proofread for grammar and clarity: ',
                 type: SettingItemType.String,
                 section: 'Chat_GPT_Search',
                 public: true,
@@ -122,7 +122,7 @@ joplin.plugins.register({
                 label: 'Command 4 Name',
             },
             'GPTSearchKeywordDefine': {
-                value: 'Translate the following text to Japanese: ',
+                value: 'Translate to Japanese: ',
                 type: SettingItemType.String,
                 section: 'Chat_GPT_Search',
                 public: true,
@@ -168,7 +168,7 @@ joplin.plugins.register({
                 label: 'Command 6 Name',
             },
             'GPTSearchKeywordRephrase': {
-                value: 'Rephrase the following while keeping the core message intact: ',
+                value: 'Rephrase while keeping the core message intact: ',
                 type: SettingItemType.String,
                 section: 'Chat_GPT_Search',
                 public: true,

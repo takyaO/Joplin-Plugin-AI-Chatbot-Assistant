@@ -18,6 +18,6 @@
 		"search"
 	],
 	"enable_api": true,
-	"_publish_hash": "sha256:f60d20f9e5d4b8f0671bc367c7dea0384510c02d34169a21e2daf008e56f0fb0",
-	"_publish_commit": "main:c8d11ea191cf5e64634bd02612844d480a1655d6"
+	"_publish_hash": "sha256:f83b0d2049b38b187cecda3133cbdd3b406cd2216109f57e0feee269a02d3af7",
+	"_publish_commit": "main:971ff9f7a73ad32211eb6b68a270b440c1c256e9"
 }
