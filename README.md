@@ -17,15 +17,14 @@ Integrating [Joplin](https://joplinapp.org/) with a self-hosted AI platform like
 * `Base URL`: Enter your Open WebUI instance URL, or like https://chatgpt.com
 * `Model`: Specify a model for the chat session, like gpt-4o
 * `Additional Parameters`: In Open WebUI, chat sessions can be customized through various [URL parameters](https://docs.openwebui.com/features/chat-features/url-params/). 
-
-** `temporary-chat`: Mark the chat as a temporary session if set `true`. 
-** `web-search`: Enable web search functionality if set `true`. 
+- `temporary-chat`: Mark the chat as a temporary session if set `true`. 
+- `web-search`: Enable web search functionality if set `true`. 
 
 ## How it works
 
 Right-click on a selected text shows the context menu with Command Names as specified in the Plugin Setting Section. Chatbot's response to the query or prompt is displayed in an external browser. 
 
 
-** This plugin is enhancement of [Joplin GPT Search Plugin](https://joplinapp.org/plugins/plugin/Jopline-Plugin-Chat-GPT-Search/) by Bhashkar Kumar Gupta. **
+**This plugin is enhancement of [Joplin GPT Search Plugin](https://joplinapp.org/plugins/plugin/Jopline-Plugin-Chat-GPT-Search/) by Bhashkar Kumar Gupta.**
 
 Reference for Starting development: [Getting started with plugin development](https://github.com/laurent22/joplin/blob/dev/readme/api/get_started/plugins.md)
