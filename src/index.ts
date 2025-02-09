@@ -115,7 +115,7 @@ joplin.plugins.register({
                 label: '4',
             },
             'GPTSearchLabelDefine': {
-                value: 'Translation',
+                value: 'Translate',
                 type: SettingItemType.String,
                 section: 'Chat_GPT_Search',
                 public: true,
@@ -138,14 +138,14 @@ joplin.plugins.register({
                 label: '5',
             },
             'GPTSearchLabelRelated': {
-                value: 'Find related info',
+                value: 'Related info',
                 type: SettingItemType.String,
                 section: 'Chat_GPT_Search',
                 public: true,
                 label: 'Command 5 Name',
             },
             'GPTSearchKeywordRelated': {
-                value: 'Find info related to: ',
+                value: 'Provide information related to: ',
                 type: SettingItemType.String,
                 section: 'Chat_GPT_Search',
                 public: true,
